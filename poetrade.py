@@ -1,10 +1,13 @@
 import requests
+import cfscrape
 import logging
 from datetime import date, timedelta
 from bs4 import BeautifulSoup
 
 BASE_URL = "http://poe.trade"
 league = "Standard"
+
+scraper = cfscrape.create_scraper()
 
 def Config(**kwargs):
     global league
@@ -103,7 +106,7 @@ def GetPageLink(**kwargs):
     payload = BuildParameters(**kwargs)
     
     logging.debug("Querying "+BASE_URL+"/search...")
-    r = requests.post(BASE_URL+"/search", data=payload, allow_redirects=False)
+    r = scraper.post(BASE_URL+"/search", data=payload, allow_redirects=False)
     logging.debug("Response received.")
     
     soup = BeautifulSoup(r.text, "html.parser")
@@ -123,7 +126,7 @@ def GetItemsPage(link, sorted=False):
         payload = {}
     
     logging.debug("Querying "+link+"...")
-    r = requests.post(link, data = payload)
+    r = scraper.post(link, data = payload)
     logging.debug("Response received.")
     
     return r.text
