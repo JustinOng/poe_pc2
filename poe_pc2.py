@@ -24,8 +24,8 @@ import poeunique
 import poecadiro
 import poemap
 
-LEAGUE = "Breach"
-LEAGUE_HC = "Hardcore Breach"
+LEAGUE = "Legacy"
+LEAGUE_HC = "Hardcore Legacy"
 LOG_FILE = "C:\Program Files (x86)\Grinding Gear Games\Path of Exile\logs\Client.txt"
 
 def online():
