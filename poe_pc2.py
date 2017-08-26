@@ -170,6 +170,8 @@ while True:
                             #if corrrupted not set, set to default value of non corrupted
                             if argument == "corrupted" and options["corrupted"] == None:
                                 options["corrupted"] = "0"
+                            elif "vaal" in options["name"].lower():
+                                options["corrupted"] = "1"
                             
                             #None if flag not present, = 0 if only flag present, = yes/no/any by user
                             if options[argument] == None or options[argument] == "any":
