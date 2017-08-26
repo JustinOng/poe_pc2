@@ -24,7 +24,7 @@ import poeunique
 import poecadiro
 import poemap
 
-LEAGUE = "Legacy"
+LEAGUE = "Harbinger"
 LEAGUE_HC = "Hardcore Legacy"
 LOG_FILE = "C:\Program Files (x86)\Grinding Gear Games\Path of Exile\logs\Client.txt"
 
