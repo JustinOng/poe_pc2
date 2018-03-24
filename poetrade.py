@@ -84,7 +84,7 @@ def BuildParameters(**kwargs):
         "time": str(date.today() - timedelta(days=7)),
         "corrupted": "",
         "online": "",
-        "buyout": "x",
+        "has_buyout": "1",
         "altart": "",
         "capquality": "x",
         "buyout_min": "",
