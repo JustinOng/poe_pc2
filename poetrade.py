@@ -94,7 +94,7 @@ def BuildParameters(**kwargs):
         "identified": ""
     }
     
-    ARGUMENTS = ["name", "base", "q_min", "q_max", "corrupted", "identified", "online", "league"]
+    ARGUMENTS = ["name", "base", "q_min", "q_max", "corrupted", "identified", "online", "league", "link_min", "link_max"]
     
     for argument in ARGUMENTS:
         if argument in kwargs:

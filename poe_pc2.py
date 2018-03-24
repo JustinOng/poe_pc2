@@ -86,6 +86,7 @@ pc_parser.add_argument("--corrupted", help="'any', 'yes', or 'no'", nargs="?", c
 pc_parser.add_argument("--identified", help="'any', 'yes', or 'no'", nargs="?", const="yes")
 pc_parser.add_argument("--all", action="store_true")
 pc_parser.add_argument("--quality", nargs="?", const=None)
+pc_parser.add_argument("--links", nargs="?", const=None)
 pc_parser.add_argument("--hc", action="store_true")
 pc_parser.add_argument("--rarity", nargs="?", const=None)
 pc_parser.add_argument("name", nargs="?", default="", help="name of item")
@@ -193,6 +194,13 @@ while True:
                             options["q_max"] = quality_match[0][1]
                         
                         del options["quality"]
+                        
+                        if options["links"]:
+                          print(options["links"])
+                          options["link_min"] = int(options["links"])
+                          options["link_max"] = int(options["links"])
+                        
+                        del options["links"]
                                                 
                         #change None to blank
                         if options["base"] == None:
