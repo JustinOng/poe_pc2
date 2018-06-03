@@ -228,11 +228,11 @@ while True:
                         link = poetrade.GetPageLink(**options)
                         
                         print link
-                        page = poetrade.GetItemsPage(link, sorted=True)
+                        page = poetrade.GetItemsPage(link, sorted=False)
                         
                         soup = BeautifulSoup(page, "html.parser");
         
-                        items = soup.find_all("tbody")
+                        items = soup.find_all("tbody", class_="item")
                         
                         if len(items) == 0:
                             if unknown:
