@@ -281,7 +281,7 @@ while True:
                         
                         commonPrice = "Most common: "+shortenPrice(prices.most_common(1)[0][0])+ "("+str(prices.most_common(1)[0][1])+")"
                         
-                        item = soup.find("a").text.strip()
+                        item = soup.find("tbody", class_="item").get("data-name").strip()
                         
                         display("&"+item+("(online)" if options["online"] == "x" else "")+("(hc)" if options["hc"] else "")+" on http://poe.trade ("+str(len(items))+" item"+("s" if len(items) > 1 else "")+"): "+commonPrice+", Lowest: "+lowestPrice)
                     elif args[0] == "math":
