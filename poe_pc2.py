@@ -24,7 +24,7 @@ import poeunique
 import poecadiro
 import poemap
 
-LEAGUE = "Bestiary"
+LEAGUE = "Incursion"
 LEAGUE_HC = "Hardcore Legacy"
 LOG_FILE = "C:\Program Files (x86)\Grinding Gear Games\Path of Exile\logs\Client.txt"
 
@@ -110,7 +110,7 @@ previous_line = ""
 link = False
 
 #configure online scheduler
-schedule.every(4.5).minutes.do(online)
+#schedule.every(4.5).minutes.do(online)
 
 while True:
     try:
